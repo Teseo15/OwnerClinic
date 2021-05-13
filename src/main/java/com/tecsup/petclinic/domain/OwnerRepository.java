@@ -11,9 +11,9 @@ public interface OwnerRepository
 	extends CrudRepository<Owner, Long> {
 
 	// Fetch firstname
-	List<Pet> findByName(String name);
+	List<Owner> findByName(String name);
 
 	// Fetchbuscar id
-	List<Pet> findByTypeId(int typeId);
+	List<Owner> findByTypeId(int typeId);
 
 }

@@ -1,52 +1,56 @@
 package com.tecsup.petclinic.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-@Entity(name = "Owners")
+@Entity(name = "owners")
 public class Owner {
 
-	
-private int id;
-private String first_name;
-private String last_name;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	@Column(name = "first_name")
+	private String firstname;
+	@Column(name = "last_name")
+	private String lastname;
 private String address;
 private String city;
 private String telephone;
 
-public Owner(String first_name, String last_name, String address, String city, String telephone) {
-	super();
-	this.first_name = first_name;
-	this.last_name = last_name;
-	this.address = address;
-	this.city = city;
-	this.telephone = telephone;
-}
-public Owner(int id, String first_name, String last_name, String address, String city, String telephone) {
+
+public Owner(Long id) {
 	super();
 	this.id = id;
-	this.first_name = first_name;
-	this.last_name = last_name;
+}
+public Owner(String firstname, String lastname, String address, String city, String telephone) {
+	super();
+	this.firstname = firstname;
+	this.lastname = lastname;
 	this.address = address;
 	this.city = city;
 	this.telephone = telephone;
 }
-public int getId() {
+
+public Long getId() {
 	return id;
 }
-public void setId(int id) {
+public void setId(Long id) {
 	this.id = id;
 }
-public String getFirst_name() {
-	return first_name;
+public String getFirstname() {
+	return firstname;
 }
-public void setFirst_name(String first_name) {
-	this.first_name = first_name;
+public void setFirstname(String firstname) {
+	this.firstname = firstname;
 }
-public String getLast_name() {
-	return last_name;
+public String getLastname() {
+	return lastname;
 }
-public void setLast_name(String last_name) {
-	this.last_name = last_name;
+public void setLastname(String lastname) {
+	this.lastname = lastname;
 }
 public String getAddress() {
 	return address;
@@ -68,8 +72,9 @@ public void setTelephone(String telephone) {
 }
 @Override
 public String toString() {
-	return "Owner [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", address=" + address
+	return "Owner [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", address=" + address
 			+ ", city=" + city + ", telephone=" + telephone + "]";
 }
+
 
 }
