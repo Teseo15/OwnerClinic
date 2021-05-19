@@ -1,8 +1,7 @@
-package com.tecsup.petclinic.service;
-
+package com.tecsup.petclinic.owner;
 import java.util.List;
 
-import com.tecsup.petclinic.domain.Owner;
+
 import com.tecsup.petclinic.exception.PetNotFoundException;
 
 

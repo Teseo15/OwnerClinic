@@ -1,17 +1,14 @@
-package com.tecsup.petclinic.service;
+package com.tecsup.petclinic.owner;
 
 import java.util.List;
 import java.util.Optional;
-
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.tecsup.petclinic.domain.Owner;
-import com.tecsup.petclinic.domain.OwnerRepository;
 import com.tecsup.petclinic.exception.PetNotFoundException;
-
+@Service
 public class OwnerServiceImpl implements OwnerService{
 	
 	private static final Logger logger = LoggerFactory.getLogger(OwnerServiceImpl.class);
@@ -26,8 +23,8 @@ public class OwnerServiceImpl implements OwnerService{
 
 	@Override
 	public Owner update(Owner owner) {
-		// TODO Auto-generated method stub
-		return null;
+	
+		return ownerRepository.save(owner);
 	}
 
 	@Override

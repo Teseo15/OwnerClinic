@@ -1,4 +1,4 @@
-package com.tecsup.petclinic.domain;
+package com.tecsup.petclinic.owner;
 
 import java.util.List;
 

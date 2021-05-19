@@ -12,11 +12,7 @@ import com.tecsup.petclinic.domain.Pet;
 import com.tecsup.petclinic.domain.PetRepository;
 import com.tecsup.petclinic.exception.PetNotFoundException;
 
-/**
- * 
- * @author jgomezm
- *
- */
+
 @Service
 public class PetServiceImpl implements PetService {
 
@@ -35,22 +31,13 @@ public class PetServiceImpl implements PetService {
 		return petRepository.save(pet);
 	}
 
-	/**
-	 * 
-	 * @param pet
-	 * @return
-	 */
+
 	@Override
 	public Pet update(Pet pet) {
 		return petRepository.save(pet);
 	}
 
 
-	/**
-	 * 
-	 * @param id
-	 * @throws PetNotFoundException
-	 */
 	@Override
 	public void delete(Long id) throws PetNotFoundException{
 
